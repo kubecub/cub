@@ -1,0 +1,25 @@
+<! doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断数的奇偶</title>
+</head>
+<body>
+         请输入一个数
+        <input type=text  id="myinput" value=""  onblur="getInput()">
+        <script >
+             function getInput(){
+               var num=document.getElementById("myinput").value;
+              if(num==''){
+                alert("输入不能为空");
+               }
+               else if(num%2==0){
+                    alert(num+"是一个偶数");
+                }
+               else {
+                    alert(num+"是一个奇数");
+                }
+        }
+        </script>
+</body>    
+</html>

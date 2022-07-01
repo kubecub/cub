@@ -1,0 +1,52 @@
+<! doctype>
+<html>
+<head lang="en">
+   <meta charset="gbk">
+   <title></title>
+   <script>
+       function a(){
+           var x=parseInt(form1.text2.value);
+           var n=parseInt(form1.text1.value);
+           switch(x)
+           {
+              case 1:
+              case 3:
+              case 5:
+              case 7:
+              case 8:
+              case 10:
+              case 12:
+                 alert("该月有31天");
+                 break;
+              case 4:
+              case 6:
+              case 9:
+              case 11:
+                 alert("该月有30天");
+                 break;
+             case 2:
+                 if(n%4==0&&n%100==0||n%400==0)
+	        {
+                   alert("该月有29天");
+                   break;}
+	         else
+	        {
+                   alert("该月有28天");
+                   break;
+                }
+              default:
+                alert("输入错误");
+           }  
+        }
+   </script>
+</head>
+<body>
+   <form name="form1">
+      请输入年
+        <input type="text"  name="text1" >
+      请输入月份
+        <input type="text"  name="text2" >
+      <input type="button"  value="计算" onclick="a()"/>
+   </form>
+</body>
+</html>

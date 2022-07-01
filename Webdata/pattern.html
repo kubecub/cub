@@ -1,0 +1,35 @@
+<! doctype html>
+<html>
+<head>
+   <meta charset="gbk">
+   <title>pattern</title>
+</head>
+<body>
+  <h1 align="center">个人简历调查表</h1>
+  <form div align="center">
+    姓名<input type="text" required="required"/><br>
+    密码<input type="password" autofocus="true" pattern="[a-z][a-z0-9]{5,9}"/><br>
+    手机号<input type="text" size="30" pattern="(13[0-9]|15[0-9])[0-9]{8}" placeholder="请输入130-139或150-159开头的手机号"/><br>
+    性别
+      <input type="radio" name="sex" checked="checked"/>男
+      <input type="radio" name="sex" />女<br>
+     个人爱好
+      <input type="checkbox"/>上网
+      <input type="checkbox"/>游戏
+      <input type="checkbox"/>音乐
+      <input type="checkbox"/>足球<br> 
+     职业
+     <select multiple="multiple" size="4">
+       <option>政府职员</option>
+       <option>工程师</option>
+       <option>律师</option>
+       <option>教师</option>
+     </select>
+     电子邮件<input type="text" pattern="\w{1,}@(qq|163).com"/><br>
+     发表您的见解<br>
+     <textarea cols="30" rows="3">
+     </textarea><br>
+     <input type="submit" value="提交"/>
+  </form>
+</body>
+</html>

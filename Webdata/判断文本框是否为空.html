@@ -1,0 +1,24 @@
+<! doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断文本框是否为空</title>
+
+</head>
+<body>
+        请输入名字
+        <input type=text" id="myinput" value=""  onblur="getInput()">
+        <script >
+             function getInput(){
+               var name=document.getElementById("myinput").value;
+               if(name==''){
+                    alert("姓名不能为空");
+                }
+               else{
+                    alert("你好"+name);
+                }
+        }
+        </script>
+</body>    
+    
+</html>

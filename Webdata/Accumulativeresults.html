@@ -1,0 +1,29 @@
+<! doctype>
+<html>
+<head lang="en">
+   <meta charset="gbk">
+   <title></title>
+   <script>
+      function a(){
+          var x=parseInt(form1.text1.value);
+          var y=parseInt(form1.text2.value);
+          var sum=0;
+          for(var i=x;i<=y;i++)
+          {
+              sum+=i;
+          }
+         alert("累加的和为："+sum);
+     }
+
+   </script>
+</head>
+<body>
+   <form name="form1">
+      从
+        <input type="text"  name="text1" >
+      累加到
+        <input type="text"  name="text2" ><br>
+      <input type="button"  value="计算" onclick="a()"/>
+   </form>
+</body>
+</html>
