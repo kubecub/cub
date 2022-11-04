@@ -2,6 +2,14 @@
 
 
 
+## module
+
++ `code block`：[./cub/README.md](./cub/README.md)
++ `PATH` ：[./jdk1.8/](./jdk1.8/)
++ The `cub` script is automatically pushed to `git` ：[./gitsync.sh](./gitsync.sh)
+
+
+
 ##  contribution
 
 > fork the repository to your local
