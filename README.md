@@ -42,16 +42,20 @@ git pull origin main
 1. The normal way
 
    ```
+   git add .
+   git commit -s -m "You-commits"
    git push origin main
    ```
 
    
 
-2. You can choose the script
+2. You can choose the script （💡 recommendations）
 
    ```bash
-   gitsync.sh You
+   gitsync.sh You-commits
    ```
 
    > You need an sh environment and just run it
+   >
+   > ![image-20221104192425085](http://sm.nsddd.top/smimage-20221104192425085.png)
 
