@@ -1,5 +1,8 @@
 # cub
 
+<a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/la3d7e2jmpn7lsfgfcla" alt="trackgit-views" />
+</a>
 
 
 ## module
