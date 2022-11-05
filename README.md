@@ -160,3 +160,11 @@ SET FOREIGN_KEY_CHECKS = 1;
 </details>
 
 <br>
+
+## 💡 Copyright statement &copy;
+
+[![GitHub license](https://sm.nsddd.top//typora/cs-awesome-Block_Chain?mail:3293172751@qq.com)](https://github.com/c-ub/cub/blob/main/LICENSE)
+
+All content of this project complies with the [Apache License 2.0 ](https://github.com/c-ub/cub/blob/main/LICENSE)  &copy;
+
+🫡 ontributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
