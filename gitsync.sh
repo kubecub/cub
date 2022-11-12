@@ -73,15 +73,15 @@ echo "是否选择提交类型(默认选择yes)？(Y/N)"
         echo "9: perf：性能优化"
         echo "⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️"
 
-        feat="feat：新功能（feature）"
-        fix="fix：修补bug"
-        docs="docs：文档（documentation）"
-        style="style： 格式（不影响代码运行的变动）"
-        refactor="refactor：重构（即不是新增功能，也不是修改bug的代码变动）"
-        test="test：增加测试"
-        chore="chore：构建过程或辅助工具的变动"
-        revert="revert：回滚"
-        perf="perf：性能优化"
+        feat="feat"
+        fix="fix"
+        docs="docs"
+        style="style"
+        refactor="refactor"
+        test="test"
+        chore="chore"
+        revert="revert"
+        perf="perf"
 
         echo "请输入提交类型(前面的序号)："
         read -p "=> " type
@@ -124,21 +124,18 @@ echo "是否选择提交类型(默认选择yes)？(Y/N)"
     fi
 
     git add .
-    git commit -s -m "$type($desc)： $guser"  # -s 用于签名, -m 用于备注
+    git commit -s -m "$type($desc): $guser"  # -s 用于签名, -m 用于备注
     # pull
     result=$(git pull origin $branch)
     tmp=$(echo $result | grep "fix conflicts")
     if [ "$tmp" != "" ]
     then
         echo "(ノ=Д=)ノ┻━┻ 合并冲突, 请手动解决后提交"
-        git pull origin $branch
-        git push origin $branch
     else
         # 推送并且保证推送成功
         git push origin $branch
     fi
 
-    echo "⬇️⬇️⬇️⬇️⬇️"
     # 判断推动是否成功
     if [ $? -eq 0 ]; then  
         echo "⚠️ 推送成功"

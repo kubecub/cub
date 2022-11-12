@@ -1,10 +1,10 @@
 JDK 是1.8
+
 需要安装metamask，否则用不了（导入账户）
+
 后台是springboot
 
 IDE 是intelij idea
-
-数据库文件在wiki中可以找到，数据库文件在wiki中可以找到。
 
 前端就是javascript （原生）
 
