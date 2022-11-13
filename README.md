@@ -189,7 +189,9 @@ ${password = 123456}
 use create
 ```
 
+<br>
 <details><summary><b>⚡ 演示</b></summary>
+
 ```bash
 @3293172751 ➜ /workspaces/mysql/data $ docker ps |head -2 
 CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
@@ -256,8 +258,8 @@ mysql> select * from user;
 
 mysql> 
 ```
-
-</deteils>
+<br>
+</details>
 
 ## License &copy;
 
