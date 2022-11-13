@@ -257,6 +257,8 @@ mysql> select * from user;
 mysql> 
 ```
 
+</deteils>
+
 ## License &copy;
 
 [![GitHub license](https://sm.nsddd.top//typora/cs-awesome-Block_Chain?mail:3293172751@qq.com)](https://github.com/c-ub/cub/blob/main/LICENSE)
