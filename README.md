@@ -161,6 +161,102 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 <br>
 
+
+## you can use docker
+
+```bash
+mkdir -p ../mysql/data; unzip -d ../mysql/data/ data.zip || \
+yum install -y unzip || \
+apt install -y unzip || \
+echo "Use the Linux environment"
+```
+
+```dockerfile
+docker run -d -p 3306:3306 --privileged=true -v /workspaces/mysql/log:/var/log/mysql -v /workspaces/mysql/data:/var/lib/mysql -v / workspaces/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 --name cub-mysql mysql:5.7
+```
+
+**exec container:**
+
+```bash
+docker ps | head -n 2 
+docker exec -it ${u container id} /bin/bash
+```
+
+**mysql:**
+```bash
+mysql -u root -p
+${password = 123456}
+use create
+```
+
+<details><summary><b>⚡ 演示</b></summary>
+```bash
+@3293172751 ➜ /workspaces/mysql/data $ docker ps |head -2 
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+e5b59b93aa64   mysql:5.7   "docker-entrypoint.s…"   4 minutes ago   Up 4 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   mysql_cub
+@3293172751 ➜ /workspaces/mysql/data $ docker ps | sudo tee /etc/
+tee: /etc/: Is a directory
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+e5b59b93aa64   mysql:5.7   "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   mysql_cub
+@3293172751 ➜ /workspaces/mysql/data $ docker exec -it e5b59b93aa64 /bin/bash
+bash-4.2# mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.40 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| create             |
+| db2                |
+| db3                |
+| learnjdbc          |
+| mybitis            |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+9 rows in set (0.24 sec)
+
+mysql> use create
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_create |
++------------------+
+| ps               |
+| sc               |
+| student          |
+| tc               |
+| user             |
++------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from user;
++--------------+----------+----------+-------------+----------------------+
+| account      | password | identify | uName       | mail                 |
++--------------+----------+----------+-------------+----------------------+
+| 202006010328 | 123456   |        0 | xiongxinwei | xiongxinwei@mail.com |
++--------------+----------+----------+-------------+----------------------+
+1 row in set (0.01 sec)
+
+mysql> 
+```
+
 ## License &copy;
 
 [![GitHub license](https://sm.nsddd.top//typora/cs-awesome-Block_Chain?mail:3293172751@qq.com)](https://github.com/c-ub/cub/blob/main/LICENSE)
